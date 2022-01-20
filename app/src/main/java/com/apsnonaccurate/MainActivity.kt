@@ -1,12 +1,16 @@
 package com.apsnonaccurate
 
+import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
+import com.apsnonaccurate.activity.LoginActivity
 import com.apsnonaccurate.fragment.*
+import com.apsnonaccurate.helper.SharedPref
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
@@ -23,9 +27,15 @@ class MainActivity : AppCompatActivity() {
     private lateinit var menuItem: MenuItem
     private lateinit var bottomNavigationView: BottomNavigationView
 
+    private val statusLogin = false
+
+    private lateinit var s:SharedPref
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        s = SharedPref(this)
 
         setUpBottomNav()
 
@@ -59,7 +69,12 @@ class MainActivity : AppCompatActivity() {
                     callFragment(3,fragmentSupport)
                 }
                 R.id.navigation_profil ->{
-                    callFragment(4,fragmentProfil)
+                    if (s.getStatusLogin()){
+                        callFragment(4,fragmentProfil)
+                    }else{
+                        startActivity(Intent(this, LoginActivity::class.java))
+                    }
+
                 }
             }
 

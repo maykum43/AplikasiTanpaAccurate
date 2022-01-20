@@ -7,7 +7,7 @@
     android:orientation="vertical">
     
     <RelativeLayout
-        android:background="@color/cardview_dark_background"
+        android:background="@color/Dark_Blue"
         android:padding="8dp"
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -53,33 +53,59 @@
 
     </RelativeLayout>
 
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/vp_slider"
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="200dp"/>
+        android:layout_height="match_parent">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_marginTop="15dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:textSize="16dp"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            android:layout_marginHorizontal="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Produk Terbaru"/>
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_produk"
+        <LinearLayout
+            android:layout_marginBottom="70dp"
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="match_parent">
 
-    </LinearLayout>
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/vp_slider"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"/>
 
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Produk Terbaru"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_produk"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_artikel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
 
 </LinearLayout>

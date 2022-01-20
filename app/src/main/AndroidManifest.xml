@@ -10,9 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ApsNonAccurate">
         <activity
-            android:name=".activity.MainActivity"
-            android:exported="false"
-            android:label="@string/title_activity_main" />
+            android:name=".activity.LoginActivity"
+            android:exported="false" />
+<!--         <activity-->
+<!--         android:name=".activity.MainActivity"-->
+<!--         android:exported="false"-->
+<!--         android:label="@string/title_activity_main" />-->
+
         <activity
             android:name=".MainActivity"
             android:exported="true">

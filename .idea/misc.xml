@@ -3,16 +3,23 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/FIKBEE/AndroidStudioProjects/ApsNonAccurate/app/src/main/res/drawable/bg_btn_primary.xml" value="0.240625" />
+        <entry key="..\:/Users/FIKBEE/AndroidStudioProjects/ApsNonAccurate/app/src/main/res/drawable/bg_btn_secondary.xml" value="0.240625" />
         <entry key="..\:/Users/FIKBEE/AndroidStudioProjects/ApsNonAccurate/app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.240625" />
         <entry key="..\:/Users/FIKBEE/AndroidStudioProjects/ApsNonAccurate/app/src/main/res/drawable/ic_search.xml" value="0.240625" />
+        <entry key="..\:/Users/FIKBEE/AndroidStudioProjects/ApsNonAccurate/app/src/main/res/drawable/round_corner.xml" value="0.240625" />
+        <entry key="..\:/Users/FIKBEE/AndroidStudioProjects/ApsNonAccurate/app/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="..\:/Users/FIKBEE/AndroidStudioProjects/ApsNonAccurate/app/src/main/res/layout/activity_main.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/FIKBEE/AndroidStudioProjects/ApsNonAccurate/app/src/main/res/layout/activity_main2.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/FIKBEE/AndroidStudioProjects/ApsNonAccurate/app/src/main/res/layout/activity_masuk.xml" value="0.19583333333333333" />
         <entry key="..\:/Users/FIKBEE/AndroidStudioProjects/ApsNonAccurate/app/src/main/res/layout/fragment_dashboard.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/FIKBEE/AndroidStudioProjects/ApsNonAccurate/app/src/main/res/layout/fragment_home.xml" value="0.21" />
         <entry key="..\:/Users/FIKBEE/AndroidStudioProjects/ApsNonAccurate/app/src/main/res/layout/fragment_produk.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/FIKBEE/AndroidStudioProjects/ApsNonAccurate/app/src/main/res/layout/fragment_profil.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/FIKBEE/AndroidStudioProjects/ApsNonAccurate/app/src/main/res/layout/fragment_scanner.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/FIKBEE/AndroidStudioProjects/ApsNonAccurate/app/src/main/res/layout/fragment_support.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/FIKBEE/AndroidStudioProjects/ApsNonAccurate/app/src/main/res/layout/item_artikel.xml" value="0.19583333333333333" />
+        <entry key="..\:/Users/FIKBEE/AndroidStudioProjects/ApsNonAccurate/app/src/main/res/layout/item_produk.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/FIKBEE/AndroidStudioProjects/ApsNonAccurate/app/src/main/res/layout/item_slider.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/FIKBEE/AndroidStudioProjects/ApsNonAccurate/app/src/main/res/menu/bottom_nav_menu.xml" value="0.22447916666666667" />
       </map>
