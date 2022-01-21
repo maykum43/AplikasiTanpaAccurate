@@ -1,5 +1,6 @@
 package com.apsnonaccurate.activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -18,12 +19,21 @@ class MasukActivity : AppCompatActivity() {
 
         s = SharedPref(this)
 
+        mainButton()
+    }
+
+    fun mainButton(){
+
         //Inisialisasi ID (Button)
-        val btnLogin = findViewById<TextView>(R.id.btn_ProsesLogin)
+        val btnLogin = findViewById<Button>(R.id.btn_ProsesLogin)
+        val btnRegist = findViewById<TextView>(R.id.tv_regist)
 
         btnLogin.setOnClickListener {
             s.setStatusLogin(true)
         }
 
+        btnRegist.setOnClickListener{
+            startActivity(Intent(this, RegisterActivity::class.java))
+        }
     }
 }

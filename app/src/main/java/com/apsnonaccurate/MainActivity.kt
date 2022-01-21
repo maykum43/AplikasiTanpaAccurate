@@ -9,6 +9,7 @@ import android.view.MenuItem
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.apsnonaccurate.activity.LoginActivity
+import com.apsnonaccurate.activity.MasukActivity
 import com.apsnonaccurate.fragment.*
 import com.apsnonaccurate.helper.SharedPref
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -72,7 +73,7 @@ class MainActivity : AppCompatActivity() {
                     if (s.getStatusLogin()){
                         callFragment(4,fragmentProfil)
                     }else{
-                        startActivity(Intent(this, LoginActivity::class.java))
+                        startActivity(Intent(this, MasukActivity::class.java))
                     }
 
                 }
