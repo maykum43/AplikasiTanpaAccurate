@@ -1,14 +1,12 @@
 package com.apsnonaccurate
 
 import android.content.Intent
-import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
-import com.apsnonaccurate.activity.LoginActivity
 import com.apsnonaccurate.activity.MasukActivity
 import com.apsnonaccurate.fragment.*
 import com.apsnonaccurate.helper.SharedPref
@@ -75,7 +73,6 @@ class MainActivity : AppCompatActivity() {
                     }else{
                         startActivity(Intent(this, MasukActivity::class.java))
                     }
-
                 }
             }
 

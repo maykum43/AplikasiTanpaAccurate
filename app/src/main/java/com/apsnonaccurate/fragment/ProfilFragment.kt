@@ -6,13 +6,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TextView
 import com.apsnonaccurate.R
 import com.apsnonaccurate.helper.SharedPref
 
 class ProfilFragment : Fragment() {
 
     lateinit var s:SharedPref
-    lateinit var btnLogout:Button
+    lateinit var btnLogout:TextView
+    lateinit var txt_nama:TextView
+    lateinit var txt_email:TextView
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -20,7 +24,7 @@ class ProfilFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view:View= inflater.inflate(R.layout.fragment_profil, container, false)
-        btnLogout = view.findViewById(R.id.btn_Logout)
+        init(view)
 
         s = SharedPref(requireActivity())
 
@@ -28,7 +32,18 @@ class ProfilFragment : Fragment() {
             s.setStatusLogin(false)
         }
 
-
+        setData()
         return view
+    }
+
+    private fun init(view: View) {
+        btnLogout = view.findViewById(R.id.btn_Logout)
+        txt_nama = view.findViewById(R.id.txt_nama)
+        txt_email = view.findViewById(R.id.txt_email)
+    }
+
+    fun setData(){
+        txt_nama.text = s.getString(s.nama)
+        txt_email.text = s.getString(s.email)
     }
 }

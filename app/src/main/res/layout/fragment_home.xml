@@ -43,13 +43,13 @@
         </androidx.cardview.widget.CardView>
 
         <ImageView
-            android:layout_centerVertical="true"
             android:id="@+id/icn_keranjang"
-            android:layout_alignParentRight="true"
-            android:layout_marginLeft="10dp"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@drawable/ic_keranjang_putih"/>
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_keranjang_putih" />
 
     </RelativeLayout>
 

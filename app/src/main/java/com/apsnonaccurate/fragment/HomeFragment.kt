@@ -44,11 +44,7 @@ class HomeFragment : Fragment() {
         rvProduk.adapter = AdapterProduk(arrProduk)
         rvProduk.layoutManager = layoutManager
 
-        rvArtikel.adapter =
-
-
-
-
+//        rvArtikel.adapter =
 
         return view
     }

@@ -29,6 +29,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.MasukActivity" />
+        <activity android:name=".activity.auth.RegisterActivity" />
+        <activity android:name=".activity.auth.LoginActivity" />
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" />

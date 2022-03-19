@@ -7,6 +7,8 @@ import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import com.apsnonaccurate.R
+import com.apsnonaccurate.activity.auth.LoginActivity
+import com.apsnonaccurate.activity.auth.RegisterActivity
 import com.apsnonaccurate.helper.SharedPref
 
 class MasukActivity : AppCompatActivity() {
@@ -29,7 +31,7 @@ class MasukActivity : AppCompatActivity() {
         val btnRegist = findViewById<TextView>(R.id.tv_regist)
 
         btnLogin.setOnClickListener {
-            s.setStatusLogin(true)
+            startActivity(Intent(this, LoginActivity::class.java))
         }
 
         btnRegist.setOnClickListener{

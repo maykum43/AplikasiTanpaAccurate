@@ -1,243 +1,382 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.RegisterActivity">
+    tools:context=".activity.auth.RegisterActivity">
 
-    <LinearLayout
-        android:gravity="center"
-        android:orientation="vertical"
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:layout_marginBottom="50dp"
-            android:layout_marginHorizontal="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Registrasi"
-            android:paddingLeft="10dp"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            />
-
-        <!--     Field Nama -->
         <LinearLayout
-            android:layout_marginHorizontal="20dp"
-            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:layout_gravity="center"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/ic_person_24"/>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="60dp">
-
-                <EditText
-                    android:id="@+id/tv_namaUser"
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:hint="Nama Lengkap"
-                    android:inputType="text"
-                    android:maxLines="1"
-                    android:singleLine="true"/>
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-        </LinearLayout>
-        <!--     Field Email -->
-        <LinearLayout
-            android:layout_marginTop="10dp"
-            android:layout_marginHorizontal="20dp"
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:layout_gravity="center"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/ic_email_24"/>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="60dp">
-
-                <EditText
-                    android:id="@+id/tv_email"
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:hint="Email"
-                    android:inputType="textEmailAddress"
-                    android:maxLines="1"
-                    android:singleLine="true"/>
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-        </LinearLayout>
-        <!--     Field Alamat -->
-        <LinearLayout
-            android:layout_marginTop="10dp"
-            android:layout_marginHorizontal="20dp"
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:layout_gravity="center"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/ic_alamat_24"/>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="60dp">
-
-                <EditText
-                    android:id="@+id/tv_alamat"
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:hint="Alamat Lengkap"
-                    android:inputType="text"
-                    android:maxLines="3"
-                    android:singleLine="false"/>
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-        </LinearLayout>
-        <!--     Field Tlp -->
-        <LinearLayout
-            android:layout_marginTop="10dp"
-            android:layout_marginHorizontal="20dp"
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:layout_gravity="center"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/ic_tlp_24"/>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="60dp">
-
-                <EditText
-                    android:id="@+id/tv_notlp"
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:hint="No. Telepon"
-                    android:inputType="number"
-                    android:maxLines="1"
-                    android:singleLine="true"/>
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-        </LinearLayout>
-        <!--     Field Password -->
-        <LinearLayout
-            android:layout_marginTop="10dp"
-            android:layout_marginHorizontal="20dp"
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:layout_gravity="center"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/ic_key_24"/>
-
-            <com.google.android.material.textfield.TextInputLayout
-                app:passwordToggleEnabled="true"
-                android:layout_width="match_parent"
-                android:layout_height="60dp">
-
-                <EditText
-                    android:id="@+id/tv_password"
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:hint="Password"
-                    android:inputType="textPassword"
-                    android:maxLines="1"
-                    android:singleLine="true"/>
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-        </LinearLayout>
-        <!--     Field Confirm Password -->
-        <LinearLayout
-            android:layout_marginTop="10dp"
-            android:layout_marginHorizontal="20dp"
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:layout_gravity="center"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/ic_key_24"/>
-
-            <com.google.android.material.textfield.TextInputLayout
-                app:passwordToggleEnabled="true"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <EditText
-                    android:id="@+id/tv_confirm_password"
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:hint="Confirmasi Password"
-                    android:inputType="textPassword"
-                    android:maxLines="1"
-                    android:singleLine="true"/>
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/btn_daftar"
-            android:layout_marginTop="40dp"
-            android:layout_marginHorizontal="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:text="Daftar"/>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:gravity="center">
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginVertical="20dp"
+            android:orientation="vertical">
 
             <TextView
-                android:layout_marginTop="10dp"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Sudah Punya akun? "/>
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="50dp"
+                android:paddingLeft="10dp"
+                android:text="Registrasi"
+                android:textColor="@color/Blue"
+                android:textSize="40dp"
+                android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/btn_login"
-                android:layout_marginTop="10dp"
-                android:layout_width="wrap_content"
+            <!--     Field Nama -->
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text=" Login"
+                android:layout_marginHorizontal="20dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:boxCornerRadiusBottomEnd="30dp"
+                    app:boxCornerRadiusBottomStart="30dp"
+                    app:boxCornerRadiusTopEnd="30dp"
+                    app:boxCornerRadiusTopStart="30dp"
+                    app:boxStrokeColor="@color/Blue"
+                    app:boxStrokeWidth="2dp"
+                    app:startIconDrawable="@drawable/ic_person_24"
+                    android:background="@color/white">
+
+                    <EditText
+                        android:id="@+id/tv_namaUser"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:hint="Nama Lengkap"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:singleLine="true" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+            <!--     Field Email -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:boxCornerRadiusBottomEnd="30dp"
+                    app:boxCornerRadiusBottomStart="30dp"
+                    app:boxCornerRadiusTopEnd="30dp"
+                    app:boxCornerRadiusTopStart="30dp"
+                    app:boxStrokeColor="@color/Blue"
+                    app:boxStrokeWidth="2dp"
+                    app:startIconDrawable="@drawable/ic_email_24">
+
+                    <EditText
+                        android:id="@+id/tv_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:hint="Email"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1"
+                        android:singleLine="true" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+
+            <!--     Field Tlp -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:boxCornerRadiusBottomEnd="30dp"
+                    app:boxCornerRadiusBottomStart="30dp"
+                    app:boxCornerRadiusTopEnd="30dp"
+                    app:boxCornerRadiusTopStart="30dp"
+                    app:boxStrokeColor="@color/Blue"
+                    app:boxStrokeWidth="2dp"
+                    app:prefixTextColor="@color/Blue"
+                    app:startIconDrawable="@drawable/ic_baseline_home_24"
+                    android:background="@color/white">
+
+                    <EditText
+                        android:id="@+id/tv_alamat"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:hint="Alamat Lengkap"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:singleLine="true" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+            <!--     Field Tlp -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:boxCornerRadiusBottomEnd="30dp"
+                    app:boxCornerRadiusBottomStart="30dp"
+                    app:boxCornerRadiusTopEnd="30dp"
+                    app:boxCornerRadiusTopStart="30dp"
+                    app:boxStrokeColor="@color/Blue"
+                    app:boxStrokeWidth="2dp"
+                    app:prefixText="+62 "
+                    app:prefixTextColor="@color/Blue"
+                    app:startIconDrawable="@drawable/ic_tlp_24"
+                    android:background="@color/white">
+
+                    <EditText
+                        android:id="@+id/tv_notlp"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:hint="No. Telepon"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:singleLine="true" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+            <!--     Field Norek -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:boxCornerRadiusBottomEnd="30dp"
+                    app:boxCornerRadiusBottomStart="30dp"
+                    app:boxCornerRadiusTopEnd="30dp"
+                    app:boxCornerRadiusTopStart="30dp"
+                    app:boxStrokeColor="@color/Blue"
+                    app:boxStrokeWidth="2dp"
+                    app:startIconDrawable="@drawable/ic_baseline_account_balance_wallet_24"
+                    android:background="@color/white">
+
+                    <EditText
+                        android:id="@+id/tv_norek"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:hint="No. Rekening"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:singleLine="true" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+            <!--     Field Nama Bank -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:boxCornerRadiusBottomEnd="30dp"
+                    app:boxCornerRadiusBottomStart="30dp"
+                    app:boxCornerRadiusTopEnd="30dp"
+                    app:boxCornerRadiusTopStart="30dp"
+                    app:boxStrokeColor="@color/Blue"
+                    app:boxStrokeWidth="2dp"
+                    app:startIconDrawable="@drawable/ic_baseline_account_balance_24"
+                    android:background="@color/white">
+
+                    <EditText
+                        android:id="@+id/tv_nama_bank"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:hint="Nama Bank"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:singleLine="true" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+            <!--     Field Atas Nama -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:boxCornerRadiusBottomEnd="30dp"
+                    app:boxCornerRadiusBottomStart="30dp"
+                    app:boxCornerRadiusTopEnd="30dp"
+                    app:boxCornerRadiusTopStart="30dp"
+                    app:boxStrokeColor="@color/Blue"
+                    app:boxStrokeWidth="2dp"
+                    app:startIconDrawable="@drawable/ic_person_24"
+                    android:background="@color/white">
+
+                    <EditText
+                        android:id="@+id/tv_atas_nama"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:hint="Atas Nama"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:singleLine="true" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+            <!--     Field Password -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:boxCornerRadiusBottomEnd="30dp"
+                    app:boxCornerRadiusBottomStart="30dp"
+                    app:boxCornerRadiusTopEnd="30dp"
+                    app:boxCornerRadiusTopStart="30dp"
+                    app:boxStrokeColor="@color/Blue"
+                    app:boxStrokeWidth="2dp"
+                    app:startIconDrawable="@drawable/ic_key_24"
+                    android:background="@color/white"
+                    app:passwordToggleEnabled="true">
+
+                    <EditText
+                        android:id="@+id/tv_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:hint="Password"
+                        android:inputType="textPassword"
+                        android:maxLines="1"
+                        android:singleLine="true"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <!--     Field Password -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:boxCornerRadiusBottomEnd="30dp"
+                    app:boxCornerRadiusBottomStart="30dp"
+                    app:boxCornerRadiusTopEnd="30dp"
+                    app:boxCornerRadiusTopStart="30dp"
+                    app:boxStrokeColor="@color/Blue"
+                    app:boxStrokeWidth="2dp"
+                    app:startIconDrawable="@drawable/ic_key_24"
+                    android:background="@color/white"
+                    app:passwordToggleEnabled="true">
+
+                    <EditText
+                        android:id="@+id/tv_co_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:hint="Confirmasi Password"
+                        android:inputType="textPassword"
+                        android:maxLines="1"
+                        android:singleLine="true"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_daftar"
+                android:layout_marginTop="40dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="DAFTAR"
                 android:textStyle="bold"
-                android:textSize="16dp"
-                android:textColor="@color/Blue"/>
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_btn_primary" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Sudah Punya akun? " />
+
+                <TextView
+                    android:id="@+id/btn_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text=" Login"
+                    android:textColor="@color/Blue"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
 
         </LinearLayout>
 
+    </androidx.core.widget.NestedScrollView>
+    <ProgressBar
+        android:id="@+id/pb_regist"
+        android:layout_centerInParent="true"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:visibility="gone"/>
 
-    </LinearLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
